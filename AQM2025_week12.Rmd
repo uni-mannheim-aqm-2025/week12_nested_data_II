@@ -1,8 +1,9 @@
 ---
 title: "AQM Week 12 -- Nested Data II"
 author: 
-  - Oliver Rittmann
-date: "May 23, 2024"
+  - Domantas Undzėnas
+  - Muhammad Muhammad
+date: "May 22|23, 2025"
 output:
   html_document:
     toc: true
@@ -55,7 +56,7 @@ load("raw-data/ward_macro_week12.Rdata")
 
 ## Before we get started
 
-This is the final AQM 2024 lab session! I will host longer office hours in two weeks and (but none next week) if you want further advice for your term paper.
+This is the final AQM 2025 lab session! we will host longer office hours in two weeks and (but none next week) if you want further advice for your term paper.
 
 ### Term Paper
 
@@ -63,7 +64,7 @@ Please upload your final term paper on ILIAS. The deadline is June, 19, 10:00 CE
 
 ![ILIAS Upload](images/ILIAS.png)
 
-The paper itself should be `lastname_lastname_AQM24.pdf` (`lastname_lastname_lastname_AQM24.pdf` if you are in a group of three). Your upload should include all code and data that is necessary to replicate your analysis. I highly recommend you to work as you did in the homeworks, i.e. in an R-project environment. If you do so, you can simply zip the folder of your Project and upload it.
+The paper itself should be `lastname_lastname_AQM25.pdf` (`lastname_lastname_lastname_AQM25.pdf` if you are in a group of three). Your upload should include all code and data that is necessary to replicate your analysis. We highly recommend you to work as you did in the homeworks, i.e. in an R-project environment. If you do so, you can simply zip the folder of your Project and upload it.
 
 ---
 
@@ -118,7 +119,7 @@ parties
 left-right scale)
   + `ENEP_tmin1` = Party Fractionalisation - Last Election (Gallagher Fractionalization Index)
 
-For this week, I added some additional country level variables:
+For this week, we added some additional country level variables:
 
   + `c_parliamentary`: Has the country a parliamentary or non-parliamentary system?
   + `c_bicameral`: Has the country a bicameral or unicameral system?
@@ -711,7 +712,7 @@ Let's summarize the advantages and disadvantages of the approaches.
 
   + Multi-level models do not help us in accounting for ommitted confounders on the higher level. If you are concerned about unobserved confounders on the higher level, then multi-level models won't do the job for you!
   
-To choose, what I recommend is to think *carefully about what these points mean for your research question*. "Unobserved higher level confounder" is an abstract term, try to fill it with life! If you fear that this is a concern and you are interested in a causal effect where the treatment typically changes within your units over time, then fixed effects might be the better choice. If you have less concerns about unobserved confounders on the higher level but want learn from comparing you higher level units, then multi-level models might be better. 
+To choose, what we recommend is to think *carefully about what these points mean for your research question*. "Unobserved higher level confounder" is an abstract term, try to fill it with life! If you fear that this is a concern and you are interested in a causal effect where the treatment typically changes within your units over time, then fixed effects might be the better choice. If you have less concerns about unobserved confounders on the higher level but want learn from comparing you higher level units, then multi-level models might be better. 
 
 But: It is important to phrase out what these things mean in your context! If you are able to do that, then you are able to make an informed choice.
 
@@ -778,11 +779,11 @@ summary(rewb)
 
 We see that the coefficient is positive and thus in line with the hypothesis--but comes with a lot of uncertainty. So we cannot make bold statements here.
 
-If you want to read more about this model, I recommend the paper by [Bell and Jones (2015): Explaining Fixed Effects: Random Effects Modeling of Time-Series Cross-Sectional and Panel Data](https://www.cambridge.org/core/journals/political-science-research-and-methods/article/explaining-fixed-effects-random-effects-modeling-of-timeseries-crosssectional-and-panel-data/0334A27557D15848549120FE8ECD8D63).
+If you want to read more about this model, we recommend the paper by [Bell and Jones (2015): Explaining Fixed Effects: Random Effects Modeling of Time-Series Cross-Sectional and Panel Data](https://www.cambridge.org/core/journals/political-science-research-and-methods/article/explaining-fixed-effects-random-effects-modeling-of-timeseries-crosssectional-and-panel-data/0334A27557D15848549120FE8ECD8D63).
 
 ## Concluding Remarks:
 
-This was the final lab session! If you wish to speak to us about your term paper, I will be available during my regular office hours on Tuesday next week (and later if needed). Please book an appointment.
+This was the final lab session! If you wish to speak to us about your term paper, we will be available during my regular office hours on Tuesday next week (and later if needed). Please book an appointment.
 
 Thank you for your participation!
 
