@@ -3,7 +3,7 @@ title: "AQM Week 12 -- Nested Data II"
 author: 
   - Domantas Undzėnas
   - Muhammad Muhammad
-date: "May 22|23, 2025"
+date: "May 22 | 23, 2025"
 output:
   html_document:
     toc: true
@@ -692,7 +692,7 @@ Let's summarize the advantages and disadvantages of the approaches.
   
 #### Disadvantage of fixed effects models:
 
-  + We loose all the information that is stored at the higher level. If we are interested in explaining differences between countries or want to use the differences between countries to estimate our effect, then this does not work with fixed effects.
+  + We lose all the information that is stored at the higher level. If we are interested in explaining differences between countries or want to use the differences between countries to estimate our effect, then this does not work with fixed effects.
   
 #### Advantages of complete pooling:
 
@@ -783,7 +783,7 @@ If you want to read more about this model, we recommend the paper by [Bell and J
 
 ## Concluding Remarks:
 
-This was the final lab session! If you wish to speak to us about your term paper, we will be available during my regular office hours on Tuesday next week (and later if needed). Please book an appointment.
+This was the final lab session! If you wish to speak to us about your term paper, we will be available during our regular office hours on Tuesday next week (and later if needed). Please book an appointment.
 
 Thank you for your participation!
 
