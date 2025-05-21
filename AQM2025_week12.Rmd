@@ -56,15 +56,15 @@ load("raw-data/ward_macro_week12.Rdata")
 
 ## Before we get started
 
-This is the final AQM 2025 lab session! we will host longer office hours in two weeks and (but none next week) if you want further advice for your term paper.
+This is the final AQM 2025 lab session! we will host longer office hours if you want further advice for your term paper.
 
 ### Term Paper
 
-Please upload your final term paper on ILIAS. The deadline is June, 19, 10:00 CEST.
+Please upload your final term paper on ILIAS. The deadline is June, 4, 10:00 CEST.
 
 ![ILIAS Upload](images/ILIAS.png)
 
-The paper itself should be `lastname_lastname_AQM25.pdf` (`lastname_lastname_lastname_AQM25.pdf` if you are in a group of three). Your upload should include all code and data that is necessary to replicate your analysis. We highly recommend you to work as you did in the homeworks, i.e. in an R-project environment. If you do so, you can simply zip the folder of your Project and upload it.
+The paper itself should be `lastname_lastname_AQM25.pdf` (`lastname_lastname_lastname_AQM25.pdf` if you are in a group of three). Your upload should include all code and data that is necessary to replicate your analysis. We highly recommend you to work as you did in the homeworks, i.e. in an R-project environment. If you do so, you can simply zip the folder of your Project and upload it. One submission per group is sufficient.
 
 ---
 
@@ -131,7 +131,7 @@ The data is time-series cross-section data: We observe multiple elections in dif
 
 ![Nested Data (3)](images/nested3.png)
 
-We already noted last week that this is a challenging research question because there may be unobserved and therefore ommitted confounding variables. Because the data structure is hierarchical, we can think of potential counfounders on the *country level (variables that vary between countries but not are constant over time)* and on the *election level (variables that vary within countries)*.
+We already noted last week that this is a challenging research question because there may be unobserved and therefore omitted confounding variables. Because the data structure is hierarchical, we can think of potential counfounders on the *country level (variables that vary between countries but not are constant over time)* and on the *election level (variables that vary within countries)*.
 
 ### A second look into fixed effects regression models
 
@@ -151,7 +151,7 @@ We recognized that the research question posed by Ward (2020) was a difficult on
 
 What are those fixed effects (i.e. country dummies) good for?
 
-  + By including country fixed effects, we implicitely account for all (unobserved) time-invariant country level confounding variables!
+  + By including country fixed effects, we implicitly account for all (unobserved) time-invariant country level confounding variables!
   + Thus, fixed effects are a great tool if we worry about unobserved confounders that only vary between the higher level units of our data.
   + Note: fixed effects do not help with confounders that vary within the higher level units (time-varying confounders)! That's why Ward (2020) controls for additional election level variables:
   
@@ -397,7 +397,7 @@ mlm_2 <- lmer(vote_share_cab ~ satislfe_survey_mean +
 summary(mlm_2)
 ```
 
-We are now able to estimate an effect of `c_parliamentary`, even though we have an intercept for each individual country. You can think of this effect as one that aims to expain the variation of the intercepts you see in the plots above. Noteably, the effect is different compared to the one in the pooled model. It still has the same direction, but appears to be smaller in magnitude and it comes with much more uncertainty.
+We are now able to estimate an effect of `c_parliamentary`, even though we have an intercept for each individual country. You can think of this effect as one that aims to expalin the variation of the intercepts you see in the plots above. Notably, the effect is different compared to the one in the pooled model. It still has the same direction, but appears to be smaller in magnitude and it comes with much more uncertainty.
 
 Let's have a look at what is going on in both models:
 
@@ -474,7 +474,7 @@ $$
       \mu_\beta \\
 \end{pmatrix}, 
 \begin{pmatrix}
-      \sigma^{2}_{\alpha} & \rho \sigma_\alpha \sigma_\beta \\
+      \sigma^{2}_{\alpha} & \sigma_\alpha \sigma_\beta \\
       \sigma_\alpha \sigma_\beta & \sigma^{2}_{\beta}
 \end{pmatrix}
 \end{pmatrix}
@@ -527,6 +527,7 @@ for (i in 1:length(intercepts_mlm3)) {
 }
 
 ```
+
 Let's compare this to the full pooling, and to the no pooling approach where each country gets its own regression:
 
 ```{r}
